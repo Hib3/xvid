@@ -14,6 +14,7 @@ for i in range(hit):
 
     if url.status_code == 404:#もしない場合はその直前のIDを記録
         current_ID = ('http://www.xvideos.com/video'+ str(ID+i-1)+'/')
+        hit +=1
         with open('newest_ID.html','w') as file:
             file.write(current_ID)
     else:
